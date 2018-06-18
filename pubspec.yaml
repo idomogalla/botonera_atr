@@ -1,0 +1,98 @@
+name: botonera_atr
+description: Botonera ATR
+
+dependencies:
+  flutter:
+    sdk: flutter
+  audioplayer:
+  path_provider:
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://www.dartlang.org/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - audios/alto_ensayo.mp3
+    - audios/arriba_bebitos.mp3
+    - audios/bajito.mp3
+    - audios/besis.mp3
+    - audios/buen_dia.mp3
+    - audios/bullying.mp3
+    - audios/cafecito.mp3
+    - audios/con_compas.mp3
+    - audios/don_manijita.mp3
+    - audios/el_amor.mp3
+    - audios/escrachado.mp3
+    - audios/estoy_abajo.mp3
+    - audios/fa_piola.mp3
+    - audios/fa_piola2.mp3
+    - audios/gracias.mp3
+    - audios/gracias2.mp3
+    - audios/gracias3.mp3
+    - audios/hagan_quieran.mp3
+    - audios/hermosos.mp3
+    - audios/hola_hermosos.mp3
+    - audios/lindos.mp3
+    - audios/los_amo_chicos.mp3
+    - audios/los_amo_fuerte.mp3
+    - audios/manija_quien.mp3
+    - audios/nerd.mp3
+    - audios/no_digas_eso.mp3
+    - audios/no_nos_falta_nada.mp3
+    - audios/no.mp3
+    - audios/pagate_un_asado.mp3
+    - audios/perdon.mp3
+    - audios/practicado.mp3
+    - audios/risa.mp3
+    - audios/si_senor.mp3
+    - audios/siesta.mp3
+    - audios/son_lo_mas.mp3
+    - audios/sopa_paraguaya.mp3
+    - audios/strangers_in_the_night.mp3
+    - audios/te_amo_pento.mp3
+    - audios/te_amo_pento2.mp3
+    - audios/teatro_papa.mp3
+    - audios/waza.mp3
+    - audios/woo_hoo.mp3
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.io/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.io/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.io/custom-fonts/#from-packages
