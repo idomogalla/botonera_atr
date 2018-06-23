@@ -16,6 +16,7 @@ class BotoneraApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Botonera ATR',
       theme: new ThemeData(
+        brightness: Brightness.light,
         primaryColor: Colors.lightGreen[600],
         accentColor: Colors.amber,
       ),
@@ -33,6 +34,36 @@ class HomePage extends StatelessWidget {
             'Botonera ATR',
             style: new TextStyle(color: Colors.white),
           ),
+          actions: <Widget>[
+            new IconButton(
+              icon: const Icon(Icons.help),
+              color: new Color(0xFFFFFFFF),
+              onPressed: () async { await showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return new SimpleDialog(
+                    title: const Text(
+                      'Compartir',
+                      textAlign: TextAlign.center
+                    ),                 
+                    children: <Widget>[
+                      const Padding(
+                        padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                        child: const Text(
+                          'Para compartir un audio se debe mantener presionado el audio deseado hasta que ' +
+                          'salga el menú contextual de compartir.',
+                          textAlign: TextAlign.justify,
+                          style: const TextStyle(
+                            fontSize: 16.5,                            
+                          ),
+                          )
+                      )
+                    ]
+                  );
+                },
+              ); },
+            ),
+          ],
           centerTitle: true,
           elevation: 1.5,
         ),
@@ -58,7 +89,9 @@ class HomePageBody extends StatelessWidget {
               child: new RaisedButton(
                 color: new Color(0xFFF9A825),
                 onPressed: (){ _playFile(audio.nombreArchivo.toString()); },
-                elevation: 3.0,
+                elevation: 4.0,
+                splashColor: Colors.red,
+                animationDuration: new Duration(seconds: 2),
                 child: new Text(
                       audio.nombre.toString(),
                       textAlign: TextAlign.center,
