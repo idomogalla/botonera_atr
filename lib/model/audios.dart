@@ -35,6 +35,10 @@ const kAudios =  const <Audios>[
     nombreArchivo: "cafecito"
   ),
   const Audios(
+    nombre: "Ciclos menstruales",
+    nombreArchivo: "ciclos_menstruales"
+  ),
+  const Audios(
     nombre: "Con mis compas",
     nombreArchivo: "con_compas"
   ),
@@ -61,6 +65,10 @@ const kAudios =  const <Audios>[
   const Audios(
     nombre: "Fah que piola 2",
     nombreArchivo: "fa_piola2"
+  ),
+  const Audios(
+    nombre: "Feliz cumple!",
+    nombreArchivo: "feliz_cumple"
   ),
   const Audios(
     nombre: "Gracias",
