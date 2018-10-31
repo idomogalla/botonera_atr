@@ -4,7 +4,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:audioplayer/audioplayer.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 import 'package:botonera_atr/model/audios.dart';
 
@@ -79,16 +79,18 @@ class HomePageBody extends StatelessWidget {
   @override
     Widget build(BuildContext context) {
       return new GridView.count(
+        // Creo el botón
         crossAxisCount: 3,
         childAspectRatio: 1.65,
+        // Mapeo todos los audios y voy cargando uno a uno a través de audio (Ver model/audios.dart)
         children: _audios.map((audio) {
-          return new GestureDetector(
+          return new GestureDetector( // Detector de gestos para compartir
             onLongPress: () { _shareFile(audio.nombreArchivo.toString()); },
-            child: new Container(
+            child: new Container( // Configuración del botón
               margin: new EdgeInsets.all(1.0),
               child: new RaisedButton(
                 color: new Color(0xFFF9A825),
-                onPressed: (){ _playFile(audio.nombreArchivo.toString()); },
+                onPressed: (){ _playFile(audio.nombreArchivo.toString()); }, // Al presionar se activa el reproductor
                 elevation: 4.0,
                 splashColor: Colors.red,
                 animationDuration: new Duration(seconds: 2),
@@ -128,6 +130,7 @@ class HomePageBody extends StatelessWidget {
   _playFile(nombrearchivo) async {
     try {
       AudioPlayer audioPlayer = new AudioPlayer();
+      // Guardo el archivo que está en la carpeta audios en la carpeta temporal y lo reproduzco
       final file = new File('${(await getTemporaryDirectory()).path}/audio.mp3');
       file.writeAsBytesSync((await rootBundle.load('audios/'+nombrearchivo.toString()+'.mp3')).buffer.asUint8List());
       audioPlayer.play(file.path, isLocal: true);

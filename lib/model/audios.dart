@@ -5,6 +5,7 @@ class Audios{
   const Audios({this.nombre, this.nombreArchivo});
 }
 
+// Listo todos los audios para después cargarlos en main.dart
 const kAudios =  const <Audios>[
   const Audios(
     nombre: "Alto ensayo",
